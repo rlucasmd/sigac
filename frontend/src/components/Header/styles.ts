@@ -17,5 +17,29 @@ export const HeaderContainer = styled.header`
       flex-direction: column;
     }
   }
+  .paths{
+    padding: 0px 32px;
 
+    border-bottom: 1px solid #cecece;
+
+    button{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 32px;
+      width: 40px;
+
+      line-height: 0;
+      background: transparent;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      transition: 0.3s;
+
+
+      &:hover{
+        background-color: #cecece;
+      }
+    }
+  }
 `;

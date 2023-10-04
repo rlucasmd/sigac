@@ -1,0 +1,1 @@
+docker run -d -e MONGO_INITDB_ROOT_USERNAME=sigac -e MONGO_INITDB_ROOT_PASSWORD=medico123 -p 27017:27017 mongo
