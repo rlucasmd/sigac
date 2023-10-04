@@ -1,4 +1,5 @@
 import { HeaderContainer } from "./styles";
+import { House } from "phosphor-react";
 
 export function Header() {
   return (
@@ -14,7 +15,9 @@ export function Header() {
         </div>
       </div>
       <div className="paths">
-
+        <button type="button">
+          <House size={24} weight="fill" />
+        </button>
       </div>
     </HeaderContainer>
   );
