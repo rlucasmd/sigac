@@ -42,5 +42,10 @@ export const FiltrosContainer = styled.div`
 export const ListaAtendimentoContent = styled.div`
   display: flex;
   padding: 32px 64px;
+  flex-direction: column;
 `;
 
+export const ListagemAtendimentos = styled.div`
+  display: flex;
+  flex-direction: column;
+`;

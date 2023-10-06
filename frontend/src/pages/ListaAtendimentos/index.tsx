@@ -1,9 +1,11 @@
 import { AutocompleteInput } from "../../components/AutocompleteInput";
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
-import { FiltrosContainer, ListaAtendimentoContainer, ListaAtendimentoContent, ListaAtendimentoHeader } from "./styles";
+import { FiltrosContainer, ListaAtendimentoContainer, ListaAtendimentoContent, ListaAtendimentoHeader, ListagemAtendimentos } from "./styles";
+import { listaAtendimentos } from "../../mocks/listaAtendimentos";
 
 import { MagnifyingGlass, Funnel } from "phosphor-react";
+import { AtendimentoItem } from "../../components/AtendimentoItem";
 
 export function ListaAtendimentos() {
   return (
@@ -38,7 +40,12 @@ export function ListaAtendimentos() {
             <span>Hoje</span>
           </div>
         </FiltrosContainer>
+        <ListagemAtendimentos>
+          {listaAtendimentos.map((atendimento) => (
+            <AtendimentoItem key={atendimento._id} />
+          ))}
 
+        </ListagemAtendimentos>
 
       </ListaAtendimentoContent>
     </ListaAtendimentoContainer>
