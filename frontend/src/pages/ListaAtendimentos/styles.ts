@@ -21,10 +21,20 @@ export const ListaAtendimentoHeader = styled.div`
     }
   }
 `;
+export const ListaAtendimentoContent = styled.div`
+    display: flex;
+    padding: 0 64px;
+    flex-direction: column;
+  
+    background-color: rgb(240, 240, 245);
+  `;
 
 export const FiltrosContainer = styled.div`
   display: flex;
+  margin: 16px 0px;
   flex-direction: column;
+  gap: 8px;
+
   width: 100%;
   div{
     display: flex;
@@ -39,13 +49,16 @@ export const FiltrosContainer = styled.div`
 `;
 
 
-export const ListaAtendimentoContent = styled.div`
-  display: flex;
-  padding: 32px 64px;
-  flex-direction: column;
-`;
 
 export const ListagemAtendimentos = styled.div`
+  h4{
+    margin-bottom: 8px;
+  }
+
+  gap: 8px; 
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  -moz-box-flex: 1;
+  min-height: 100%;
 `;

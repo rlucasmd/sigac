@@ -1,4 +1,5 @@
-import { Container, Content, StatusIndicator } from "./styles";
+import { DotsThreeOutlineVertical, Users } from "phosphor-react";
+import { ActionsContent, Container, Content, StatusIndicator } from "./styles";
 
 export function AtendimentoItem() {
   return (
@@ -15,6 +16,14 @@ export function AtendimentoItem() {
             <span>23 anos e 7 meses</span>
           </div>
         </div>
+        <ActionsContent>
+          <button type="button">
+            <Users size={32} />
+          </button>
+          <button type="button">
+            <DotsThreeOutlineVertical size={32} />
+          </button>
+        </ActionsContent>
       </Content>
     </Container>
   );

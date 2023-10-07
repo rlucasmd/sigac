@@ -41,6 +41,7 @@ export function ListaAtendimentos() {
           </div>
         </FiltrosContainer>
         <ListagemAtendimentos>
+          <h4>Lista de Atendimentos</h4>
           {listaAtendimentos.map((atendimento) => (
             <AtendimentoItem key={atendimento._id} />
           ))}
