@@ -18,7 +18,7 @@ export const HeaderContainer = styled.header`
     }
   }
   .paths{
-    padding: 0px 32px;
+    padding: 0px 64px;
 
     border-bottom: 1px solid #cecece;
 

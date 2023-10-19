@@ -20,6 +20,13 @@
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePatterns": "_",
+        "destructuredArrayIgnorePattern": "_"
+      }
+    ],
     "indent": [
       "error",
       2

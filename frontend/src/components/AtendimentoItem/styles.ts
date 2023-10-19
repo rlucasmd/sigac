@@ -6,6 +6,7 @@ export const Container = styled.div`
   min-height: 3rem;
 
   border: 1px solid #c3c3c3;
+  background: rgb(255, 255, 255);
 `;
 
 export const StatusIndicator = styled.div`
@@ -20,20 +21,24 @@ export const Content = styled.div`
   width: 100%;
   justify-content: space-between;
   padding: 16px;
+
+`;
+
+export const Details = styled.div`
+  display: flex;
+  gap: 16px;
+  span{
+    font-size: 14px;
+    line-height: 1.5rem;
+
+  }
   div{
     display: flex;
-
-    span{
-      font-size: 14px;
-      line-height: 1.5rem;
-    }
-    div{
-      display: flex;
-      flex-direction: column;
-    }
+    flex-direction: column;
   }
 `;
 
 export const ActionsContent = styled.div`
   display: flex;
+  gap: 16px
 `;

@@ -1,4 +1,8 @@
-export const listaAtendimentos = [
+import { listaAtendimentosType } from "../types/listaAtendimentosType";
+
+
+
+export const listaAtendimentos: listaAtendimentosType[] = [
   {
     _id: "651d7e7efee1d16e01dac1dd",
     responsavel: {
@@ -9,7 +13,7 @@ export const listaAtendimentos = [
     cidadao: {
       _id: "651d6d0cb733e665d7ce1b80",
       nome: "Ferdinando Fagundes Filho",
-      data_nascimento: "12-01-1998"
+      data_nascimento: "01-09-1978"
     }
   },
   {

@@ -45,7 +45,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: GeneralSans, sans-serif;
   }
   body {
-    background: #fafafa;
+    background: rgb(240, 240, 245);
     color: #333;
   }
   button {

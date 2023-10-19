@@ -7,7 +7,26 @@ import { listaAtendimentos } from "../../mocks/listaAtendimentos";
 import { MagnifyingGlass, Funnel } from "phosphor-react";
 import { AtendimentoItem } from "../../components/AtendimentoItem";
 
+// import * as Dialog from "@radix-ui/react-dialog";
+
+import { FilterComponent, IFilterSchema } from "../../components/FilterComponent";
+import { useState } from "react";
+
 export function ListaAtendimentos() {
+
+  const [isFilterModalOpen, setIsOpenFilterModal] = useState(false);
+
+  function handleCloseFilterModal() {
+    setIsOpenFilterModal(false);
+  }
+  function handleOpenFilterModal() {
+    setIsOpenFilterModal(true);
+  }
+
+  function onHandleFilter(data: IFilterSchema) {
+    console.log("Filtrando dados / Lista Atendimentos", data);
+  }
+
   return (
     <ListaAtendimentoContainer>
       <ListaAtendimentoHeader>
@@ -22,17 +41,23 @@ export function ListaAtendimentos() {
       </ListaAtendimentoHeader>
       <ListaAtendimentoContent>
         <FiltrosContainer>
-          <div>
+          <div className="actions">
             <Input
               icon={<MagnifyingGlass size={24} />}
               placeholder="Pesquise por nome, CPF ou CNS"
             />
-            <Button>
+
+            <Button onClick={handleOpenFilterModal}>
               <Funnel size={20} weight="bold" />
               Filtros
             </Button>
+            <FilterComponent
+              onHandleFilter={onHandleFilter}
+              isOpen={isFilterModalOpen}
+              onCloseModal={handleCloseFilterModal}
+            />
           </div>
-          <div>
+          <div >
             <strong>Status do atendimento:</strong>
             <span>Aguardando Atendimento, Em atendimento</span>
             <span>|</span>
@@ -43,7 +68,10 @@ export function ListaAtendimentos() {
         <ListagemAtendimentos>
           <h4>Lista de Atendimentos</h4>
           {listaAtendimentos.map((atendimento) => (
-            <AtendimentoItem key={atendimento._id} />
+            <AtendimentoItem
+              key={atendimento._id}
+              {...atendimento}
+            />
           ))}
 
         </ListagemAtendimentos>

@@ -3,13 +3,14 @@ import { ButtonContainer } from "./styles";
 
 type IButton = ComponentProps<typeof ButtonContainer> & {
   children: ReactNode;
+  variant?: "primary" | "secondary";
 }
 
 export const Button = forwardRef<
   ElementRef<typeof ButtonContainer>,
   IButton
->(({ children, ...rest }, ref) => (
-  <ButtonContainer {...rest} ref={ref}>
+>(({ children, variant = "primary", ...rest }, ref) => (
+  <ButtonContainer {...rest} ref={ref} variant={variant}>
     {children}
   </ButtonContainer>
 ));
